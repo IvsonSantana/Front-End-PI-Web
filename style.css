@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('/fonts/SFPRODISPLAYBLACKITALIC.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYBOLD.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYHEAVYITALIC.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYMEDIUM.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYREGULAR.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYTHINITALIC.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('OTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'MinhaFonte', sans-serif;
+    background: linear-gradient(297deg, #A369FF 0%, #8B55F5 25.5%, #7342EB 49.5%, #5B2EE0 74.5%, #431BD6 100%);
+}
+
+.imagem-fixa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 40px 0 0 40px;
+}
+
+.imagem-fixa img {
+    width: 250px;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    
+}
+
+.left img {
+    width: 250px;
+
+}
+
+.left form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: 100%;
+}
+
+.left h1 {
+    color: #F8F8F8;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 90px;
+}
+
+.left p {
+    color: #A3A2A2;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 590;
+}
+
+.left select {
+    width: 60%;
+    height: 40px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 20px;
+    padding: 6px;
+    font-size: 16px;
+    background: #2a1183;
+    color: #fff;
+    outline: none;
+}
+
+.left input {
+    width: 60%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: #ffffff00;
+    margin-top: 30px;
+    color: #fff;
+    padding: 8px;
+    overflow: hidden;
+    outline: none;
+}
+
+.left input::placeholder {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+button {
+    cursor: pointer;
+    padding: 6px;
+    width: 30%;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    background-color: #2a1183;
+    color: #fff;
+    transition: all ease 0.2s;
+}
+
+button:hover {
+    background-color: #2a11838b;
+}
+
+.right {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right img {
+    width: 550px;
+}
