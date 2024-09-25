@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('/fonts/SFPRODISPLAYBLACKITALIC.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYBOLD.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYHEAVYITALIC.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYMEDIUM.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYREGULAR.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYTHINITALIC.OTF') format('OTF'),
+         url('/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('OTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'MinhaFonte', sans-serif;
+    background: linear-gradient(297deg, #A369FF 0%, #8B55F5 25.5%, #7342EB 49.5%, #5B2EE0 74.5%, #431BD6 100%);
+}
+
+.container {
+    display: flex;
+}
+
+.left {
+    width: 15%;
+    height: 100vh;
+}
+
+nav .top-image {
+    width: 200px;
+}
+
+nav {
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    width: 90%;
+}
+
+ul li img {
+    width: 25px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.right {
+    width: 80%;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 12px #0000003c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.right h1 {
+    margin-top: 70px;
+}
+
+.right form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.right input, select {
+    border: 2px solid #431BD6;
+    border-radius: 2px;
+    outline: none;
+    padding: 4px;
+    font-size: 16px;
+    width: 400px;
+}
+
+.right span {
+    display: none;
+    font-size: 12px;
+    margin-top: -15px;
+}
+
+.right button {
+    width: 50%;
+    margin: 0 auto;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background-color: #7342EB;
+    color: #fff;
+    cursor: pointer;
+}
+
+.right button:hover {
+    background-color: #8B55F5;
+    transition: all ease .5s;
+}
