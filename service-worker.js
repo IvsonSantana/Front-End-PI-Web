@@ -1,15 +1,28 @@
-const CACHE_NAME = 'plantation-cache-v1';
+const CACHE_NAME = 'portalmediotec-v1';
 const urlsToCache = [
     '/',
     '/index.html',
-    '/tutorial.html',
-    '/mapa.html',
-    '/contato.html',
-    '/styles.css',
-    '/app.js',
+    '/inicio.html',
+    '/register.html',
+    '/getTurma.html',
+    '/getProfs.html',
+    '/getDisciplina.html',
+    '/getCoord.html',
+    '/getAlunos.html',
+    '/comunicados.html',
+    '/cadastroCoord.html',
+    '/register.css',
+    '/inicio.css',
+    '/getProfs.css',
+    '/comunicados.css',
+    '/cadastroCoord.css',
+    '/js/*.js',
     '/manifest.json',
-    '/icons/icon-192x192.png',
-    '/icons/icon-512x512.png'
+    '/imgs/*.webp',
+    '/imgs/*.png',
+    '/icons/*.png',
+    '/pwa_icons/appstore.png',
+    '/pwa_icons/playstore.png',
 ];
 
 self.addEventListener('install', event => {
