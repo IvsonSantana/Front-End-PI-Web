@@ -4,7 +4,7 @@ const TURMA_URL = 'http://localhost:10000/api/turmas';
 
 document.getElementById('logoutButton').addEventListener('click', () => {
     localStorage.removeItem('token');
-    window.location.href = '/Front-End-PI-Web/index.html';
+    window.location.href = '/index.html';
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -185,7 +185,7 @@ function abrirModalAtualizar(aluno) {
 
     if (!token) {
         alert('Você não está autenticado. Faça login primeiro.');
-        window.location.href = '/Front-End-PI-Web/index.html'; // Redirecionar para a página de login
+        window.location.href = '/index.html'; // Redirecionar para a página de login
         return;
     }
 
