@@ -1,6 +1,6 @@
-const API_URL = 'http://localhost:10000/api/comunicados/comunicados';
-const URL = 'http://localhost:10000/api/users';
-const URL_TURMAS = 'http://localhost:10000/api/turmas/count';
+const API_URL = 'https://back-end-pi-web.onrender.com/api/comunicados/comunicados';
+const URL = 'https://back-end-pi-web.onrender.com/api/users';
+const URL_TURMAS = 'https://back-end-pi-web.onrender.com/api/turmas/count';
 
 document.getElementById('logoutButton').addEventListener('click', () => {
     localStorage.removeItem('token');
