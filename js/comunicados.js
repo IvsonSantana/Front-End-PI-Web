@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:10000/api/comunicados/comunicados';
+const API_URL = 'https://back-end-pi-web.onrender.com/api/comunicados/comunicados';
 
 document.getElementById('logoutButton').addEventListener('click', () => {
     localStorage.removeItem('token');
