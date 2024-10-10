@@ -1,18 +1,18 @@
 {
-    "name": "Plantation App",
-    "short_name": "Plantation",
+    "name": "Portal Aluno MedioTEC",
+    "short_name": "MedioTEC",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#3e4eb8",
     "icons": [
         {
-            "src": "icons/icon-192x192.png",
-            "sizes": "192x192",
+            "src": "pwa_icons/appstore.png",
+            "sizes": "1024x1024",
             "type": "image/png"
         },
         {
-            "src": "icons/icon-512x512.png",
+            "src": "pwa_icons/playstore.png",
             "sizes": "512x512",
             "type": "image/png"
         }
