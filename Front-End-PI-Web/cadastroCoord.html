@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cadastroCoord.css">
+    <title>Cadastro de Usuários</title>
+</head>
+<body>
+    <div class="container">
+        <div class="right">
+            <h1>Cadastro de Usuário</h1>
+            <div class="center">
+                <form id="form">
+                    <input id="nome" name="nome" type="text" placeholder="Digite o nome" class="inputs required" oninput="nameValidate()">
+                    <span class="span-required">Digite um nome valido</span>
+    
+                    <input type="email" name="email" id="email" placeholder="Digite o email" class="inputs required" oninput="emailValidate()">
+                    <span class="span-required">Digite um email valido</span>
+    
+                    <input type="password" name="password" id="password" placeholder="Digite a senha" class="inputs required" oninput="mainPasswordValidade()">
+                    <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span>
+    
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Digite a senha novamente" class="inputs required" oninput="comparePassword()">
+                    <span class="span-required">Senhas devem ser iguais</span>
+    
+                    <select name="tipo" id="tipo">
+                        <option value="coordenador">Coordenador</option>
+                    </select>
+    
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <h2>Sucesso!</h2>
+            <p>O cadastro foi realizado com sucesso.</p>
+        </div>
+    </div>
+    <script src="/js/cadastroCoord.js"></script>
+    <script>
+        const form = document.getElementById('form');
+        const campos = document.querySelectorAll('.required');
+        const spans = document.querySelectorAll('.span-required');
+        const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+
+        function setError(index){
+            campos[index].style.borderBottom = '2px solid #e63636';
+            spans[index].style.display = 'block'
+        }
+
+        function removeError(index){
+            campos[index].style.border = '';
+            spans[index].style.display = 'none';
+        }
+
+        function nameValidate(){
+            if(campos[0].value.length < 5){
+                setError(0);
+            }else{
+                removeError(0);
+            }
+        }
+
+        function emailValidate(){
+            if(!emailRegex.test(campos[1].value)){
+                setError(1);
+            }else{
+                removeError(1);
+            }
+        }
+
+        function mainPasswordValidade(){
+            if(campos[2].value.length < 8){
+                setError(2);
+            }else{
+                removeError(2);
+                comparePassword();
+            }
+        }
+
+        function comparePassword(){
+            if(campos[2].value == campos[3].value && campos[3].value.length >= 8){
+                removeError(3);
+            }else{
+                setError(3);
+            }
+        }
+    </script>
+</body>
+</html>
