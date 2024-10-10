@@ -1,5 +1,5 @@
-const API_URL = 'http://localhost:10000/api/turmas';
-const DELETE_URL = 'http://localhost:10000/api/turmas';
+const API_URL = 'https://back-end-pi-web.onrender.com/api/turmas';
+const DELETE_URL = 'https://back-end-pi-web.onrender.com/api/turmas';
 
 document.getElementById('logoutButton').addEventListener('click', () => {
     localStorage.removeItem('token');
@@ -283,7 +283,7 @@ window.addEventListener('click', function(event) {
     }
 });
 
-const API_ALUNOS_URL = 'http://localhost:10000/api/users/alunos'; // Endpoint para buscar alunos
+const API_ALUNOS_URL = 'https://back-end-pi-web.onrender.com/api/users/alunos'; // Endpoint para buscar alunos
 
 // Selecionar os elementos do modal de adicionar alunos
 const modalAdicionarAlunos = document.getElementById('modalAdicionarAlunos');
@@ -292,7 +292,7 @@ const alunosList = document.getElementById('alunosList');
 const confirmarAdicionarAlunosButton = document.getElementById('confirmarAdicionarAlunos');
 let selectedAlunos = [];
 
-const API_TURMAS_URL = 'http://localhost:10000/api/turmas';
+const API_TURMAS_URL = 'https://back-end-pi-web.onrender.com/api/turmas';
 
 // Função para buscar turmas do backend e preencher o select
 async function buscarTurmas() {
@@ -393,7 +393,7 @@ closeAlunosDaTurmaModalButton.addEventListener('click', () => {
 
 function abrirModalAlunosDaTurma(turmaId) {
     const token = localStorage.getItem('token');
-    fetch(`http://localhost:10000/api/turmas/${turmaId}`, {
+    fetch(`https://back-end-pi-web.onrender.com/api/turmas/${turmaId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json' ,
@@ -446,7 +446,7 @@ async function deletarAlunoDaTurma(turmaId, alunosIds) {
 
     try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://localhost:10000/api/turmas/delete/${turmaId}`, {
+        const response = await fetch(`https://back-end-pi-web.onrender.com/api/turmas/delete/${turmaId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json' ,
