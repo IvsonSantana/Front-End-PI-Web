@@ -1,6 +1,6 @@
-const API_URL = 'http://localhost:10000/api/disciplinas/disciplinas';
-const API_TURMAS_ALUNOS = 'http://localhost:10000/api/turmas/alunos';
-const API_CONCEITOS = 'http://localhost:10000/api/conceitos/conceitos';
+const API_URL = 'https://back-end-pi-web.onrender.com/api/disciplinas/disciplinas';
+const API_TURMAS_ALUNOS = 'https://back-end-pi-web.onrender.com/api/turmas/alunos';
+const API_CONCEITOS = 'https://back-end-pi-web.onrender.com/api/conceitos/conceitos';
 
 
 document.getElementById('logoutButton').addEventListener('click', () => {
@@ -181,7 +181,7 @@ function abrirModal(turmaId, disciplinaId) {
 
                 // Preencher os selects com os valores dos conceitos salvos, se existirem
                 const token = localStorage.getItem('token');
-                fetch(`http://localhost:10000/api/conceitos/conceitos/aluno/${aluno._id}?disciplina=${disciplinaId}`, {
+                fetch(`https://back-end-pi-web.onrender.com/api/conceitos/conceitos/aluno/${aluno._id}?disciplina=${disciplinaId}`, {
                     headers: {
                         'Authorization': `Bearer ${token}` // Adiciona o token no cabeçalho
                     }
@@ -272,7 +272,7 @@ function salvarConceitos(alunos, disciplinaId) {
 
     // Faz a requisição para salvar os conceitos
     const token = localStorage.getItem('token');
-    fetch('http://localhost:10000/api/conceitos/conceitos', {
+    fetch('https://back-end-pi-web.onrender.com/api/conceitos/conceitos', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
