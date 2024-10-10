@@ -397,6 +397,56 @@ document.getElementById('searchAlunos').addEventListener('input', function() {
     alunosList.style.display = hasResults ? 'block' : 'none';
 });
 
+document.querySelector('.bottom a:nth-child(3)').addEventListener('click', function(event) {
+    event.preventDefault();
+    abrirModalAdicionarAlunos();
+});
+
+// Fechar modal
+closeModalAdicionarAlunosButton.addEventListener('click', function() {
+    modalAdicionarAlunos.style.display = 'none';
+});
+
+// Função para adicionar alunos à turma
+confirmarAdicionarAlunosButton.addEventListener('click', async function() {
+    const turmaId = document.getElementById('turmaSelect').value; // Pega o ID da turma selecionada
+
+    if (!turmaId) {
+        alert('Por favor, selecione uma turma.');
+        return;
+    }
+
+    if (selectedAlunos.length === 0) {
+        alert('Selecione pelo menos um aluno.');
+        return;
+    }
+
+    try {
+        // PUT request para adicionar os alunos à turma
+        const response = await fetch(`${API_URL}/${turmaId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                 'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({ aluno: selectedAlunos })
+        });
+
+        if (response.ok) {
+            alert('Alunos adicionados à turma com sucesso!');
+            modalAdicionarAlunos.style.display = 'none';
+            // Adicione aqui a lógica para atualizar a tabela de disciplinas, se necessário
+        } else {
+            const errorData = await response.json();
+            alert(`Erro ao adicionar alunos: ${errorData.message}`);
+        }
+    } catch (error) {
+        console.error('Erro ao adicionar alunos:', error);
+        alert('Erro ao conectar com o servidor.');
+    }
+});
+
+
 // Função para abrir o modal de adicionar alunos
 async function abrirModalAlunosDaTurma(turmaId) {
     turmaIdAtual = turmaId; // Armazena o ID da turma atual
