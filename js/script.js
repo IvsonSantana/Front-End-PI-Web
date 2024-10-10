@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:10000/api/users/users';
+const API_URL = 'https://back-end-pi-web.onrender.com/api/users/users';
 
 document.getElementById('form').addEventListener('submit', async (e) => {
     e.preventDefault();
