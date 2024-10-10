@@ -423,6 +423,7 @@ confirmarAdicionarAlunosButton.addEventListener('click', async function() {
 
     try {
         // PUT request para adicionar os alunos à turma
+        const token = localStorage.getItem('token');
         const response = await fetch(`${API_URL}/${turmaId}`, {
             method: 'PUT',
             headers: {
