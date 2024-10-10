@@ -329,6 +329,7 @@ function abrirModalAdicionarAlunos() {
 
 async function buscarAlunos() {
     try {
+        const token = localStorage.getItem('token');
         const response = await fetch(API_ALUNOS_URL, {
         headers: {
             'Authorization': `Bearer ${token}` // Adiciona o token no cabeçalho
