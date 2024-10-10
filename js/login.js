@@ -21,7 +21,7 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
             // Armazenar o token e informações do usuário no localStorage
             localStorage.setItem('token', data.token);
             localStorage.setItem('userName', data.nome); // Aqui é onde o nome é armazenado
-            window.location.href = '/Front-End-PI-Web/inicio.html'; // Redirecionar para a home
+            window.location.href = '/inicio.html'; // Redirecionar para a home
         } else {
             document.getElementById('errorMessage').innerText = data.message;
         }
@@ -33,10 +33,10 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
 
 // Função para verificar autenticação na home
 window.addEventListener('DOMContentLoaded', async () => {
-    if (window.location.pathname.includes('/Front-End-PI-Web/inicio.html')) {
+    if (window.location.pathname.includes('/inicio.html')) {
         const token = localStorage.getItem('token');
         if (!token) {
-            window.location.href = '/Front-End-PI-Web/index.html'; // Redireciona se não houver token
+            window.location.href = '/index.html'; // Redireciona se não houver token
         }
 
         // Logout
@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             localStorage.removeItem('userId'); // Remove o ID do usuário ao fazer logout
             localStorage.removeItem('userType'); // Remove o tipo do usuário ao fazer logout
             localStorage.removeItem('userName'); // Remove o nome do usuário ao fazer logout
-            window.location.href = '/Front-End-PI-Web/index.html'; // Redireciona para a página de login
+            window.location.href = '/index.html'; // Redireciona para a página de login
         });
     }
 });
