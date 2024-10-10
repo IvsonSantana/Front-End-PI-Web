@@ -1,6 +1,6 @@
-const API_URL = 'http://localhost:10000/api/disciplinas/disciplinas';
-const API_TURMAS = 'http://localhost:10000/api/turmas';
-const API_PROFESSORES = 'http://localhost:10000/api/users/professores';
+const API_URL = 'https://back-end-pi-web.onrender.com/api/disciplinas/disciplinas';
+const API_TURMAS = 'https://back-end-pi-web.onrender.com/api/turmas';
+const API_PROFESSORES = 'https://back-end-pi-web.onrender.com/api/users/professores';
 
 document.getElementById('logoutButton').addEventListener('click', () => {
     localStorage.removeItem('token');
