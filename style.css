@@ -1,14 +1,9 @@
 @font-face {
     font-family: 'MinhaFonte';
-    src: url('/fonts/SFPRODISPLAYBLACKITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYBOLD.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYHEAVYITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYMEDIUM.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYREGULAR.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYTHINITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('OTF');
+    src: url('/Front-End-PI-Web/fontsNew/AllRoundGothic-Bold.ttf') format('truetype'),
+         url('/Front-End-PI-Web/fontsNew/AllRoundGothic-Demi.ttf') format('truetype'),
+         url('/Front-End-PI-Web/fontsNew/AllRoundGothic-Medium.ttf') format('truetype'),
+         url('/Front-End-PI-Web/fontsNew/AllRoundGothic-XLig.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0;
+    font-family: 'MinhaFonte', sans-serif;
 }
 
 body {
@@ -138,4 +134,31 @@ button:hover {
 
 .right img {
     width: 550px;
+}
+
+.left a {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .right {
+        display: none;
+    }
+
+    .left p {
+        font-size: 22px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .left input {
+        width: 120%;
+    }
+
+    button {
+        width: 100%;
+    }
 }
