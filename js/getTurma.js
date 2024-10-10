@@ -329,7 +329,11 @@ function abrirModalAdicionarAlunos() {
 
 async function buscarAlunos() {
     try {
-        const response = await fetch(API_ALUNOS_URL);
+        const response = await fetch(API_ALUNOS_URL, {
+        headers: {
+            'Authorization': `Bearer ${token}` // Adiciona o token no cabeçalho
+        }
+    });
         alunos = await response.json(); // Armazena todos os alunos
 
         // Limpar a lista de alunos
