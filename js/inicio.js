@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             dadosDiv.innerHTML = `
                                 <div class="tudo">
                                 <div class="alunos-js">
-                                <img src="/Front-End-PI-Web/imgs/Graduation Cap.png" alt="Chapeu de graduação">
+                                <img src="/imgs/Graduation Cap.png" alt="Chapeu de graduação">
                                 <p>${data.count}</p>
                                 </div>
                                 <h3>Estudantes</h3>
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const dadosDiv = document.querySelector('.dados-container');
             dadosDiv.innerHTML += `<div class="tudo">
                                 <div class="alunos-js">
-                                <img src="/Front-End-PI-Web/imgs/Teacher.png" alt="Chapeu de graduação">
+                                <img src="/imgs/Teacher.png" alt="Chapeu de graduação">
                                 <p>${data.count}</p>
                                 </div>
                                 <h3>Professores</h3>
