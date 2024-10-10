@@ -1,6 +1,6 @@
-const API_URL = 'http://localhost:10000/api/users/coordenadores';
-const DELETE_URL = 'http://localhost:10000/api/users/users';
-const TURMA_URL = 'http://localhost:10000/api/turmas';
+const API_URL = 'https://back-end-pi-web.onrender.com/api/users/coordenadores';
+const DELETE_URL = 'https://back-end-pi-web.onrender.com/api/users/users';
+const TURMA_URL = 'https://back-end-pi-web.onrender.com/api/turmas';
 
 document.getElementById('logoutButton').addEventListener('click', () => {
     localStorage.removeItem('token');
