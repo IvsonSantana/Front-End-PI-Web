@@ -552,9 +552,9 @@ th {
     cursor: pointer; /* Cursor de mão */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .left {
-        width: 100%; /* Largura total em telas pequenas */
+        width: 0; /* Largura total em telas pequenas */
         position: relative; /* Para controle de posicionamento */
     }
 
@@ -577,7 +577,10 @@ th {
     nav.active {
         display: flex; /* Mostrar o menu quando ativado */
         flex-direction: column; /* Ajustar o layout do menu */
-        margin-top: 50px;
+        padding: 50px;
+        background-color: #05022B;
+        width: 300px;
+        height: 100vh;
     }
 
     .right {
@@ -587,8 +590,14 @@ th {
     }
 
     .top {
-        flex-wrap: wrap;
-        gap: 0;
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 0;
+      gap: 15px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-evenly;
     }
 
     .modal-content {
@@ -609,3 +618,4 @@ th {
         white-space: nowrap;
     }
 }
+
